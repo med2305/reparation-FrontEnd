@@ -1,0 +1,44 @@
+{
+    "categories": [
+        {
+            "name": "imprimantes",
+            "popularMarks": [
+                {"name": "HP", "logoUrl": "assets/img/marks/hp.png"},
+                {"name": "Canon", "logoUrl": "http://example.com/canon-logo.png"},
+                {"name": "Epson", "logoUrl": "http://example.com/epson-logo.png"}
+            ]
+        },
+        {
+            "name": "phones",
+            "popularMarks": [
+                {"name": "Apple", "logoUrl": "http://example.com/apple-logo.png"},
+                {"name": "Samsung", "logoUrl": "http://example.com/samsung-logo.png"},
+                {"name": "Huawei", "logoUrl": "http://example.com/huawei-logo.png"}
+            ]
+        },
+        {
+            "name": "computers",
+            "popularMarks": [
+                {"name": "Dell", "logoUrl": "http://example.com/dell-logo.png"},
+                {"name": "Lenovo", "logoUrl": "http://example.com/lenovo-logo.png"},
+                {"name": "Apple", "logoUrl": "http://example.com/apple-logo.png"}
+            ]
+        },
+        {
+            "name": "tablettes",
+            "popularMarks": [
+                {"name": "Apple", "logoUrl": "http://example.com/apple-logo.png"},
+                {"name": "Samsung", "logoUrl": "http://example.com/samsung-logo.png"},
+                {"name": "Microsoft", "logoUrl": "http://example.com/microsoft-logo.png"}
+            ]
+        },
+        {
+            "name": "watches",
+            "popularMarks": [
+                {"name": "Rolex", "logoUrl": "http://example.com/rolex-logo.png"},
+                {"name": "Omega", "logoUrl": "http://example.com/omega-logo.png"},
+                {"name": "Tag Heuer", "logoUrl": "http://example.com/tag-heuer-logo.png"}
+            ]
+        }
+    ]
+}
