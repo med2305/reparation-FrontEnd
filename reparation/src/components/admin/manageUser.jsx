@@ -32,7 +32,7 @@ function ManageUser() {
             }
         }
 
-        
+
     };
 
     return (
@@ -42,28 +42,20 @@ function ManageUser() {
                     <form onSubmit={handleSubmit}>
                         <TextField name="no" label="No" variant="outlined" fullWidth margin="normal" defaultValue={user ? user.no : ''} required />
                         <TextField name="name" label="Name" variant="outlined" fullWidth margin="normal" defaultValue={user ? user.name : ''} required />
-                        <TextField name="role" label="Role" variant="outlined" fullWidth margin="normal" value="technician" />
+                        <Select
+                            name="role"
+                            variant="outlined"
+                            fullWidth
+                            defaultValue={user ? user.role : 'select'}
+                        >
+                            <MenuItem value="technician">Technician</MenuItem>
+                            <MenuItem value="client">Client</MenuItem>
+                            <MenuItem value="delivery">Delivery</MenuItem>
+                        </Select>
                         <TextField name="phoneNumber" label="Phone Number" variant="outlined" fullWidth margin="normal" defaultValue={user ? user.phoneNumber : ''} required />
                         <TextField name="email" label="Email" variant="outlined" fullWidth margin="normal" defaultValue={user ? user.email : ''} required />
                         <TextField name="password" label="Password" variant="outlined" fullWidth margin="normal" type="password" defaultValue={user ? user.password : ''} />
-                        <FormControl variant="outlined" fullWidth margin="normal">
-                            <InputLabel>Category</InputLabel>
-                            <Select
-                                name="category"
-                                value={user ? user.category : selectedCategory}
-                                onChange={(e) => {
-                                    if (user) {
-                                        setUser({ ...user, category: e.target.value });
-                                    } else {
-                                        setSelectedCategory(e.target.value);
-                                    }
-                                }}
-                                required
-                            >
-                                <MenuItem value="imprimantes">imprimantes</MenuItem>
-                                <MenuItem value="phones">phones</MenuItem>
-                            </Select>
-                        </FormControl>
+                        
                         {user ? (
                             <Button type="submit" variant="contained" color="primary">
                                 Update User

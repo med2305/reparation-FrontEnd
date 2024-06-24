@@ -6,16 +6,17 @@ import ManageUser from '../admin/manageUser';
 import { jwtDecode } from 'jwt-decode';
 import { useEffect } from 'react';
 import CheckoutStepper from '../stepper';
+import Signup from '../authentification/signup';
 
-function RedirectToSignIn() {
-  const navigate = useNavigate();
+// function RedirectToSignIn() {
+//   const navigate = useNavigate();
 
-  useEffect(() => {
-    navigate('/login');
-  }, [navigate]);
+//   useEffect(() => {
+//     navigate('/login');
+//   }, [navigate]);
 
-  return null;
-}
+//   return null;
+// }
 
 export default function Routes() {
   const token = localStorage.getItem('token');
@@ -26,7 +27,7 @@ export default function Routes() {
     console.log('Decoded Token:', role);
   }
   else {
-    RedirectToSignIn();
+    // RedirectToSignIn();
   }
   return (
     <Router>
@@ -37,6 +38,7 @@ export default function Routes() {
         <Route exact path="/createUser" element={role === 'admin' ?<ManageUser /> : <Home />} />
         <Route exact path="/updateUser" element={role === 'admin' ?<ManageUser /> : <Home />} />
         <Route exact path="/stepper" element={<CheckoutStepper />} />
+        <Route exact path="/register" element={<Signup />} />☻
       </Routing>
     </Router>
   );

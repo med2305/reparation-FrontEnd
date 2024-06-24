@@ -51,7 +51,6 @@ function Users() {
                                 <TableCell>Name</TableCell>
                                 <TableCell>Email</TableCell>
                                 <TableCell>Telephone</TableCell>
-                                <TableCell>Categorie</TableCell>
                                 <TableCell>Actions</TableCell>
                             </TableRow>
                         </TableHead>
@@ -62,7 +61,6 @@ function Users() {
                                     <TableCell>{user.name}</TableCell>
                                     <TableCell>{user.email}</TableCell>
                                     <TableCell>{user.phoneNumber}</TableCell>
-                                    <TableCell>{user.category}</TableCell>
                                     <TableCell>
                                         <IconButton onClick={() => navigate('/updateUser', { state: { user } })}>
                                             <EditIcon />
